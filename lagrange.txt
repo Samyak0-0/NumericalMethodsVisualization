@@ -1,0 +1,24 @@
+def lagrange_interpolation(x_values, y_values, x):
+    total = 0
+    n = len(x_values)
+    
+    for i in range(n):
+        term = y_values[i]
+        for j in range(n):
+            if i != j:
+                term *= (x - x_values[j]) / (x_values[i] - x_values[j])
+        total += term
+        
+    return total
+
+# Given data
+x_values = [0, 1, 3, 4, 5]
+y_values = [0, 1, 81, 256, 625]
+
+# Point to estimate
+x_to_estimate = 2
+
+# Estimate y(2)
+estimated_y = lagrange_interpolation(x_values, y_values, x_to_estimate)
+
+print(f"Estimated y({x_to_estimate}) = {estimated_y}")
