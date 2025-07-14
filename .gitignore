@@ -9,8 +9,8 @@ wheels/
 # Virtual environments
 .venv
 
-bisectionMethod.py
-newtonRaphson.py
-differenceTable.py
-newtonsInterpolation.py
-Lagrange.py
+# bisectionMethod.py
+# newtonRaphson.py
+# differenceTable.py
+# newtonsInterpolation.py
+# Lagrange.py
